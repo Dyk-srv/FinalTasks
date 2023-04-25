@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string>
 
-
 // Выделение памяти под двумерный динамический массив
 template <typename T>
 void mx_memory(T**& ptr, int rows, int cols) {
@@ -23,7 +22,7 @@ void clear_mx_memory(T**& ptr, int rows) {
 	ptr = nullptr;
 }
 
-// Возврат мсетоположения массива, состоящегго из положительных элементов переданных массивов
+// Возврат мсетоположения массива, состоящего из положительных элементов переданных массивов
 template <typename T>
 T* positive_memory(T arr1[], const int size1, T arr2[], const int size2, int& var ) {
 	T* tmp = new T[size1 + size2];
