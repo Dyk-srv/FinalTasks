@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #ifndef _FUNCTIONS_H_
 #define _FUNCTIONS_H_
@@ -6,7 +6,7 @@
 #include <string>
 
 
-// Выделение памяти под двумерный динамический массив
+// Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕРґ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 template <typename T>
 void mx_memory(T**& ptr, int rows, int cols) {
 	ptr = new T* [rows];
@@ -14,7 +14,7 @@ void mx_memory(T**& ptr, int rows, int cols) {
 		ptr[i] = new T[cols] {};
 }
 
-// Освобождение памяти, выделенной под двумерный динамический массив
+// РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё, РІС‹РґРµР»РµРЅРЅРѕР№ РїРѕРґ РґРІСѓРјРµСЂРЅС‹Р№ РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 template <typename T>
 void clear_mx_memory(T**& ptr, int rows) { 
 	for (int i = 0; i < rows; i++)	
@@ -23,7 +23,7 @@ void clear_mx_memory(T**& ptr, int rows) {
 	ptr = nullptr;
 }
 
-// Возврат мсетоположения массива, состоящегго из положительных элементов переданных массивов
+// Р’РѕР·РІСЂР°С‚ РјСЃРµС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ РјР°СЃСЃРёРІР°, СЃРѕСЃС‚РѕСЏС‰РµРіРіРѕ РёР· РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РїРµСЂРµРґР°РЅРЅС‹С… РјР°СЃСЃРёРІРѕРІ
 template <typename T>
 T* positive_memory(T arr1[], const int size1, T arr2[], const int size2, int& var ) {
 	T* tmp = new T[size1 + size2];

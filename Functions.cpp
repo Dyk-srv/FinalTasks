@@ -1,4 +1,4 @@
-#include "Functions.h"
+п»ї#include "Functions.h"
 #include <fstream>
 
 
@@ -6,8 +6,8 @@ bool number_name(int num, std::string file_path) {
     std::string name;
     if (num < 10 || num >= 100)
         return false;
-    short n1 = num / 10; // десятки
-    short n2 = num % 10; // единицы
+    short n1 = num / 10; // РґРµСЃСЏС‚РєРё
+    short n2 = num % 10; // РµРґРёРЅРёС†С‹
     std::ofstream out;
     out.open(file_path);
     if (!out.is_open())
@@ -15,42 +15,42 @@ bool number_name(int num, std::string file_path) {
 
     if (n1 == 1) {
         switch (n2) {
-        case 0: name = "Десять"; break;
-        case 1: name = "Одиннадцать"; break;
-        case 2: name = "Двенадцать"; break;
-        case 3: name = "Тринадцать"; break;
-        case 4: name = "Четырнадцать"; break;
-        case 5: name = "Пятнадцать"; break;
-        case 6: name = "Шестнадцать"; break;
-        case 7: name = "Семнадцать"; break;
-        case 8: name = "Восемнадцать"; break;
-        case 9: name = "Девятнадцать"; break;
+        case 0: name = "Р”РµСЃСЏС‚СЊ"; break;
+        case 1: name = "РћРґРёРЅРЅР°РґС†Р°С‚СЊ"; break;
+        case 2: name = "Р”РІРµРЅР°РґС†Р°С‚СЊ"; break;
+        case 3: name = "РўСЂРёРЅР°РґС†Р°С‚СЊ"; break;
+        case 4: name = "Р§РµС‚С‹СЂРЅР°РґС†Р°С‚СЊ"; break;
+        case 5: name = "РџСЏС‚РЅР°РґС†Р°С‚СЊ"; break;
+        case 6: name = "РЁРµСЃС‚РЅР°РґС†Р°С‚СЊ"; break;
+        case 7: name = "РЎРµРјРЅР°РґС†Р°С‚СЊ"; break;
+        case 8: name = "Р’РѕСЃРµРјРЅР°РґС†Р°С‚СЊ"; break;
+        case 9: name = "Р”РµРІСЏС‚РЅР°РґС†Р°С‚СЊ"; break;
         }
         out << name << '\n';
         out.close();
         return true;
     }
     switch (n1) {
-    case 2: name = "Двадцать"; break;
-    case 3: name = "Тридцать"; break;
-    case 4: name = "Сорок"; break;
-    case 5: name = "Пятьдесят"; break;
-    case 6: name = "Шестьдесят"; break;
-    case 7: name = "Семьдесят"; break;
-    case 8: name = "Восемьдесят"; break;
-    case 9: name = "Девяносто"; break;
+    case 2: name = "Р”РІР°РґС†Р°С‚СЊ"; break;
+    case 3: name = "РўСЂРёРґС†Р°С‚СЊ"; break;
+    case 4: name = "РЎРѕСЂРѕРє"; break;
+    case 5: name = "РџСЏС‚СЊРґРµСЃСЏС‚"; break;
+    case 6: name = "РЁРµСЃС‚СЊРґРµСЃСЏС‚"; break;
+    case 7: name = "РЎРµРјСЊРґРµСЃСЏС‚"; break;
+    case 8: name = "Р’РѕСЃРµРјСЊРґРµСЃСЏС‚"; break;
+    case 9: name = "Р”РµРІСЏРЅРѕСЃС‚Рѕ"; break;
     }
     switch (n2) {
     case 0: break;
-    case 1: name += " один"; break;
-    case 2: name += " два"; break;
-    case 3: name += " три"; break;
-    case 4: name += " четыре"; break;
-    case 5: name += " пять"; break;
-    case 6: name += " шесть"; break;
-    case 7: name += " семь"; break;
-    case 8: name += " восемь"; break;
-    case 9: name += " девять"; break;
+    case 1: name += " РѕРґРёРЅ"; break;
+    case 2: name += " РґРІР°"; break;
+    case 3: name += " С‚СЂРё"; break;
+    case 4: name += " С‡РµС‚С‹СЂРµ"; break;
+    case 5: name += " РїСЏС‚СЊ"; break;
+    case 6: name += " С€РµСЃС‚СЊ"; break;
+    case 7: name += " СЃРµРјСЊ"; break;
+    case 8: name += " РІРѕСЃРµРјСЊ"; break;
+    case 9: name += " РґРµРІСЏС‚СЊ"; break;
     }
     out << name << '\n';
     out.close();
